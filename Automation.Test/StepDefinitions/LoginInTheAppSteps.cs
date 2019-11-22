@@ -40,6 +40,7 @@ namespace Automation.Test.StepDefinitions
         public void ThenTheLoginShouldFail()
         {
             Assert.IsFalse(this.loginPage.LoginWasASuccess());
+            this.loginPage.TakeAPicture("WrongCredentials");
             this.loginPage.Clear();
         }
     }
